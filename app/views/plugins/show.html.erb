@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @plugin.name %>
+</p>
+
+<%= link_to 'Edit', edit_plugin_path(@plugin, :editor => @editor.short) %> |
+<%= link_to 'Back', plugins_path(:editor => @editor.short) %>
+<%= button_to 'Destroy', plugin_path(@plugin, :editor =>  @editor.short), :confirm => 'Are you sure?', :method => :delete %>

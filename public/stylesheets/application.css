@@ -1,0 +1,8 @@
+p.header {font-size: 34px; font-weight: bold;}
+body, button, input {font-family: "Anonymous Pro";}
+
+p.header, ul.navigation, ul.navigation li, ul.navigation li a {display: inline-block}
+ul.navigation li {font-size: 24px}
+ul.navigation li a {padding: 10px 15px;}
+ul.navigation .selected {background-color: black;}
+ul.navigation .selected a {color: white}
