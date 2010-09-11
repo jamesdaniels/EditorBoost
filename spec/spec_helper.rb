@@ -23,4 +23,17 @@ RSpec.configure do |config|
   # examples within a transaction, comment the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+  config.before(:all) do  
+  end
+  
+  config.after(:all) do
+  end
+  
+  config.before(:each) do
+  end
+  
+  config.after(:each) do
+  end
+  
 end

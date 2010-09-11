@@ -1,0 +1,8 @@
+Welcome to Editor Boost!
+
+Choose your editor of choice:
+<ul>
+  <% @editors.each do |editor| %>
+    <li><%= link_to editor.name, "/#{editor.short}" %></li>
+  <% end %>
+</li>

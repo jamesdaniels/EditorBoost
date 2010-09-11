@@ -14,3 +14,7 @@ group :test, :development do
   gem 'cucumber'
   gem 'launchy'
 end
+
+group :test do
+  gem 'cover_me', '>= 1.0.0.pre4', :require => false
+end

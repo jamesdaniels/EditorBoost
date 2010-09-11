@@ -1,8 +1,11 @@
 Editorboost::Application.routes.draw do
   
   scope '/:editor' do
+    root :to => 'editor#show'
     resources :plugins
   end
+
+  root :to => 'editor#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

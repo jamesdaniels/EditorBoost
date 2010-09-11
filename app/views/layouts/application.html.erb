@@ -8,17 +8,19 @@
 </head>
 <body>
 
-  <p class="header">$EDITOR Boost</p>
+  <p class="header"><a href="/">$EDITOR Boost</a></p>
 
-<ul class="navigation">
-  <% Editor.all.each do |editor| %>
-    <%= content_tag :li, :class => (editor == @editor && 'selected' || '') do %>
-      <%= link_to editor.name, plugins_path(:editor => editor.short) %>
+  <ul class="navigation">
+    <% Editor.all.each do |editor| %>
+      <%= content_tag :li, :class => (editor == @editor && 'selected' || '') do %>
+        <%= link_to editor.name, "/#{editor.short}" %>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
 
-<%= yield %>
+  <div id="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
