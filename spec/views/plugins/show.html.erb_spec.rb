@@ -7,12 +7,15 @@ describe "plugins/show.html.erb" do
       :short => 'mate'))
     @plugin = assign(:plugin, stub_model(Plugin,
       :name => "Name",
-      :editor_id => 1
-    ))
+      :description => 'Asdf2',
+      :readme => 'README2',
+      :editor_id => 1))
   end
 
   it "renders attributes in <p>" do
     render
-    rendered.should contain("Name".to_s)
+    rendered.should contain(@plugin.name)
+    rendered.should contain(@plugin.description)
+    rendered.should contain(@plugin.readme)
   end
 end

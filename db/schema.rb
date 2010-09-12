@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100911042159) do
+ActiveRecord::Schema.define(:version => 20100912021609) do
 
   create_table "editors", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20100911042159) do
     t.integer  "editor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
+    t.text     "readme"
   end
 
 end

@@ -17,6 +17,8 @@ describe "plugins/new.html.erb" do
 
     rendered.should have_selector("form", :action => plugins_path(:editor => @editor.short), :method => "post") do |form|
       form.should have_selector("input#plugin_name", :name => "plugin[name]")
+      form.should have_selector("input#plugin_description", :name => "plugin[description]")
+      form.should have_selector("textarea#plugin_readme", :name => "plugin[readme]")
     end
   end
 end
