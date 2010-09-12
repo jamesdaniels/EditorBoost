@@ -1,0 +1,19 @@
+<h1>Listing versions</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Changelog</th>
+  </tr>
+
+<% @versions.each do |version| %>
+  <tr>
+    <td><%= link_to version.number, plugin_version_path(@plugin, version, :editor => @editor.short) %></td>
+    <td><%= version.changelog %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Version', new_plugin_version_path(@plugin, :editor => @editor.short) %>

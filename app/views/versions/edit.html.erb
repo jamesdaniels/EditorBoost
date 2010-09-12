@@ -1,0 +1,6 @@
+<h1>Editing version</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', plugin_version_path(@plugin, @version, :editor => @editor.short) %> |
+<%= link_to 'Back', plugin_versions_path(@plugin, :editor => @editor.short) %>

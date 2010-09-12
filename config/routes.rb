@@ -2,7 +2,9 @@ Editorboost::Application.routes.draw do
   
   scope '/:editor' do
     root :to => 'editor#show'
-    resources :plugins
+    resources :plugins do
+      resources :versions
+    end
   end
 
   root :to => 'editor#index'

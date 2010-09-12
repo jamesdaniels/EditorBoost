@@ -5,4 +5,6 @@ class Plugin < ActiveRecord::Base
   validates :name, :editor_id, :presence => true
   validates :name, :uniqueness => {:scope => :editor_id}
 
+  has_many :versions
+
 end

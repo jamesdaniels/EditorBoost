@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @version.number %>
+</p>
+
+<p>
+  <b>Changelog:</b>
+  <%= @version.changelog %>
+</p>
+
+
+<%= link_to 'Edit', edit_plugin_version_path(@plugin, @version, :editor => @editor.short) %> |
+<%= link_to 'Back', plugin_versions_path(@plugin, :editor => @editor.short) %>
+<%= link_to 'Destroy', plugin_version_path(@plugin, @version, :editor => @editor.short), :confirm => 'Are you sure?', :method => :delete %>
